@@ -7,7 +7,7 @@ import json
 # Load config
 api_key = False
 gpg_recipient = False
-server = "anonfile"
+server = False
 home = os.environ['HOME']
 
 config_file = open(home + '/.config/anonupload', 'r')
@@ -27,6 +27,18 @@ while(c != ''):
 
 config_file.close()
 
+if(server == False):
+	print("[ERROR] Server not found, using anonfile!")
+	server = "anonfile"
+if(gpg_recipient == False):
+	print("[ERROR] GPG Name not found, encryption disabled!")
+if(api_key == False):
+	print("[ERROR] API key not found, do you want to upload anyways? (y/n)")
+	answer = input()
+	if(answer in ('n', 'N')):
+		print("Exiting...")
+		sys.exit()
+
 # Handle arguments
 opts, args = getopt.getopt(sys.argv[1:], "g:ef:")
 g = None	#gzip
@@ -34,11 +46,14 @@ e = False	#encrypt
 f = None	#file
 for opt, arg in opts:
 	if(opt == '-g'): #gzip
-		g = arg
-	elif(opt == '-f'): #file #TODO: filename after all parameters
-		f = arg
+		if(arg in (1,2,3,4,5,6,7,8,9)):
+			g = arg
+		else:
+			g = 5
 	elif(opt == '-e'): #encrypt
 		e = True
+
+f = args[0] #file
 
 # Process file
 if(f != None): # Copy
@@ -57,7 +72,7 @@ if(g != None): # Gzip
 	os.system('gzip -' + str(g) + ' ' + f)
 	f = f + '.gz'
 
-if(f != None): # Upload
+if(f != None): # Upload #TODO: If API exists, use api upload, not non-api
 	print("[INFO] Uploading to " + server + '...')
 	url = 'https://anonfile.com/api/upload'
 	if(server == 'megaupload'):
