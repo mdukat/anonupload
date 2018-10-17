@@ -24,7 +24,10 @@ Available options:<br />
 `GPG:d3suu`
 
 ## HURR DURR IT'S USING OS.SYSTEM, WHY NOT BASH?!?!?!?!?
-Programmer hour cost's less than computing hour. And it (should) work.
+Computing hour costs less than Programmer hour. And it (should) work.
 
 ## See very cool workflow i made using draw.io!
 ![Cool!](https://raw.githubusercontent.com/d3suu/anonupload/dev/doc/Anonupload%20workflow.png)
+
+## Offtopic
+Check `doc` directory, there's some stuff about development. Also feel free to help and improve this tool.
