@@ -6,17 +6,21 @@ An CLI tool for fast file upload on Anonfile, Bayfiles and Megaupload
 `mv anonupload.py /usr/bin/anonupload`
 
 ## Usage
-`anonupload -e -g[1-9] -f <file_to_upload>`<br />
+`anonupload -e -g[1-9] -b[1-9] -d <file_or_directory_to_upload>`<br />
  - _-e_   - Encrypts file with your GPG key (see configuration)
  - _-g_   - Gzip's file with given option [1-9]
- - _-f_   - File to upload (WIP - remove this argument, use last arg as file)
+ - _-b_   - Bzip2 file with given option [1-9]
+ - _-h_   - Show help
+ - _-d_   - Tar directory, then work on it
  
 ## Configuration
-Create file: `$HOME/.config/anonupload`<br />
+~~Create file: `$HOME/.config/anonupload`<br />
 Available options:<br />
  - _API_ - Api key for server
  - _SERVER_ - Server type [anonfile, bayfiles, megaupload]
- - _GPG_ - Your GPG name
+ - _GPG_ - Your GPG name~~
+ 
+ Simply use `python3 config.py`, easy as that!
 
 ### Example configuration
 `API:abcdef123456790`<br />
