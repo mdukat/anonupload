@@ -44,11 +44,7 @@ if(gpg_recipient == False):
 	print("[ERROR] GPG Name not found, encryption disabled!")
 	encryption_lock = True
 if(api_key == False):
-	print("[ERROR] API key not found, do you want to upload anyways? (y/n)")
-	answer = input()
-	if(answer in ('n', 'N')):
-		print("Exiting...")
-		sys.exit()
+	print("[ERROR] API key not found, will upload normally!")
 
 # Handle arguments
 opts, args = getopt.getopt(sys.argv[1:], "hedg:b:")
