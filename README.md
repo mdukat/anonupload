@@ -14,11 +14,11 @@ An CLI tool for fast file upload on Anonfile, Bayfiles and Megaupload
  - _-d_   - Tar directory, then work on it
  
 ## Configuration
-~~Create file: `$HOME/.config/anonupload`<br />
-Available options:<br />
- - _API_ - Api key for server
- - _SERVER_ - Server type [anonfile, bayfiles, megaupload]
- - _GPG_ - Your GPG name~~
+~~Create file: `$HOME/.config/anonupload`~~<br />
+~~Available options:~~<br />
+ ~~- _API_ - Api key for server~~<br />
+ ~~- _SERVER_ - Server type [anonfile, bayfiles, megaupload]~~<br />
+ ~~- _GPG_ - Your GPG name~~<br />
  
  Simply use `python3 config.py`, easy as that!
 
