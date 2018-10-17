@@ -20,10 +20,10 @@ if(gpg == ''):
 	gpg = None
 
 print("Fine, now i will write new config...")
-config_file.write('SERVER:' + server)
+config_file.write('SERVER:' + server + '\n')
 if(api != None):
-	config_file.write('API:' + api)
+	config_file.write('API:' + api + '\n')
 if(gpg != None):
-	config_file.write('GPG:' + gpg)
+	config_file.write('GPG:' + gpg + '\n')
 
 print("Done everything! Have a nice day :)")
