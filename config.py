@@ -32,6 +32,7 @@ if(api != None):
 	config_file.write('API:' + api + '\n')
 if(gpg != None):
 	config_file.write('GPG:' + gpg + '\n')
+
 #if(files != False):
 #	config_file.write('FILES_LIST:true\n')
 
