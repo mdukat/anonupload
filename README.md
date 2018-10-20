@@ -1,6 +1,6 @@
 # anonupload
 ![logo](https://raw.githubusercontent.com/d3suu/anonupload/dev/doc/pixil-frame-0.png)<br />
-An CLI tool for fast file upload on Anonfile, Bayfiles and Megaupload
+An CLI tool for fast file and directories upload on Anonfile, Bayfiles and Megaupload with GPG encryption
 
 ## Installation
 `chmod +x anonupload.py`<br />
