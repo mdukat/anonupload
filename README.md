@@ -1,4 +1,5 @@
 # anonupload
+![logo](https://raw.githubusercontent.com/d3suu/anonupload/dev/doc/pixil-frame-0.png)<br />
 An CLI tool for fast file upload on Anonfile, Bayfiles and Megaupload
 
 ## Installation
