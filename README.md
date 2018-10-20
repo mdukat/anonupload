@@ -1,27 +1,26 @@
 # anonupload
 ![logo](https://raw.githubusercontent.com/d3suu/anonupload/dev/doc/pixil-frame-0.png)<br />
-An CLI tool for fast file and directories upload on Anonfile, Bayfiles and Megaupload with GPG encryption
+An CLI tool for fast file and directories upload and download on Anonfile, Bayfiles and Megaupload with GPG encryption
 
 ## Installation
-`chmod +x anonupload.py`<br />
-`mv anonupload.py /usr/bin/anonupload`
+`$ chmod +x install.sh`<br />
+`# ./install.sh` or `sudo ./install.sh`
 
 ## Usage
-`anonupload -e -g[1-9] -b[1-9] -d <file_or_directory_to_upload>`<br />
- - _-e_   - Encrypts file with your GPG key (see configuration)
- - _-g_   - Gzip's file with given option [1-9]
- - _-b_   - Bzip2 file with given option [1-9]
- - _-h_   - Show help
- - _-d_   - Tar directory, then work on it
+`anonupload -e -h -g[1-9] -b[1-9] -s [server] -a [api_key] -d [file_name/directory_name]`<br>
+-e - encrypt using GPG<br>
+-h - shows this help<br>
+-g[1-9] - gzip file<br>
+-b[1-9] - bzip2 file<br>
+-d - use when you want to tar whole directory<br>
+-s [server] - use different server (bayfiles, anonfile, megaupload)<br>
+-a [api_key] - api key on-the-go<br><br>
+`anonget [link]`<br>
+[link] - link to file on bayfiles, anonfile or megaupload to download
+
  
 ## Configuration
-~~Create file: `$HOME/.config/anonupload`~~<br />
-~~Available options:~~<br />
- ~~- _API_ - Api key for server~~<br />
- ~~- _SERVER_ - Server type [anonfile, bayfiles, megaupload]~~<br />
- ~~- _GPG_ - Your GPG name~~<br />
- 
- Simply use `python3 config.py`, easy as that!
+Simply use `python3 config.py`, easy as that!
 
 ### Example configuration
 `API:abcdef123456790`<br />
