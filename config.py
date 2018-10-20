@@ -19,11 +19,21 @@ gpg = input()
 if(gpg == ''):
 	gpg = None
 
+#print("Cool, do you want to save links to file so later you can download them fast? (y/n)")
+#files = input()
+#if(files == 'y'):
+#	files = True
+#else:
+#	files = False
+
 print("Fine, now i will write new config...")
 config_file.write('SERVER:' + server + '\n')
 if(api != None):
 	config_file.write('API:' + api + '\n')
 if(gpg != None):
 	config_file.write('GPG:' + gpg + '\n')
+
+#if(files != False):
+#	config_file.write('FILES_LIST:true\n')
 
 print("Done everything! Have a nice day :)")
